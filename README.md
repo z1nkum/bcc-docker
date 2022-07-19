@@ -15,4 +15,4 @@ rdctl shell
 apk add linux-headers 
 ```
 
-`docker run -it --rm --privileged --pid host -v /sys/kernel/debug:/sys/kernel/debug -v /lib/modules:/lib/modules -v /sys/fs/cgroup:/sys/fs/cgroup -v /sys/fs/bpf:/sys/fs/bpf --net host bcc:latest`
+`docker run -it --rm --privileged --pid host -v /sys/kernel:/sys/kernel -v /lib/modules:/lib/modules -v /usr/src:/usr/src  -v /sys/fs/cgroup:/sys/fs/cgroup -v /sys/fs/bpf:/sys/fs/bpf  --net host bcc:latest`
